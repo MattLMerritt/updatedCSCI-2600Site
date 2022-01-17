@@ -9,6 +9,7 @@ is to make improvements to the GUI for the site inorder to improve aesthetic and
 - Add Class Topics" Tab/page on navigator
 - Make Navigator avalible in portrait mode/phones/tablets
 - Test change in format for homework files
+- Save local copy of all files used in updated version (photos, gifs, etc...)
 
 ## Notes:
 - The original site is built using 2 files, and index an

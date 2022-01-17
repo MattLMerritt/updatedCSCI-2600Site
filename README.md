@@ -3,9 +3,13 @@ The goal of this project is to create an updated design for the RPI Spring 2022 
 The current design of the website is relativly plain and leaves room for improvement.This project 
 is to make improvements to the GUI for the site inorder to improve aesthetic and accessibility.
 
-## Tools:
 
-
+## To Do:
+- Add "Class Schedule" Tab/page on navigator
+- Add Class Topics" Tab/page on navigator
+- Make Navigator avalible in portrait mode/phones/tablets
+- Test change in format for homework files
+- Save local copy of all files used in updated version (photos, gifs, etc...)
 
 ## Notes:
 - The original site is built using 2 files, and index an

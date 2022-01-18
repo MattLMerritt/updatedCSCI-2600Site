@@ -1,77 +1,84 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html style="overflow-y: scroll;">
-  <head>
-    <meta content="text/html; charset=windows-1252"
-      http-equiv="content-type">
-    <title>Schedule</title>
-    <style type="text/css"></style>
-    <!-- <link rel="stylesheet" href="CSCIstylesheet.css" type="text/css"> --->
-    <link rel="stylesheet" href="bootstrap.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-    <script> 
-    $(function(){
+<head>
+  <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+  <title>Schedule</title>
+  <style type="text/css"></style>
+  <!-- <link rel="stylesheet" href="CSCIstylesheet.css" type="text/css"> --->
+  <link rel="stylesheet" href="bootstrap.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(function () {
       $("#weeklySchedule").load("OfficeHours.html");
     });
-    </script> 
+  </script>
 
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-          <div id="navbarColor01">
-              <a class="navbar-brand" href="index.html">Principles of Software CSCI-2600</a>
-          </div>
+</head>
 
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home
-                <span class="visually-hidden">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Resources.html">Resources</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Homework.html">Homework</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Schedule.html">Class Schedule</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Topics.html">Class Topics</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="syllabus_CSCI_2600_Spring_2022.pdf">Syllabus</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://submitty.cs.rpi.edu/courses/s22/csci2600">Homework Server</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://submitty.cs.rpi.edu/courses/s22/csci2600/forum">Discussion Form</a>
-            </li>
-          </ul>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <div id="navbarColor01">
+        <a class="navbar-brand" href="index.html">Principles of Software CSCI-2600</a>
       </div>
-    </nav>
-    <div style="text-align: left;">
-      <h1 style="text-align: left;">Principles of Software CSCI-2600<br>
-        <br>
-      </h1>
-    </div>
-    <div id="office-hours">
-    <h2 style="text-align: left;">Weekly Schedule</h2>
-     <div id="weeklySchedule">
-        <img src="Images\office-hours.PNG">
-     </div>
-    </div>
-    <br />
-    <h2 style="text-align: left;">Class Topics Schedule</h2>
-    NB: The schedule is tentative and subject to change.
-    <br>
-    <iframe
-src="https://calendar.google.com/calendar/embed?src=oh06ff7kf0s9f3p352b3th0hr0%40group.calendar.google.com&ctz=America%2FNew_York"
-      style="border: 0" scrolling="no" width="800" frameborder="0"
-      height="600"></iframe>
 
-  </body>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Resources.html">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Homework.html">Homework</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Schedule.html">Class Schedule</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Topics.html">Class Topics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="syllabus_CSCI_2600_Spring_2022.pdf">Syllabus</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://submitty.cs.rpi.edu/courses/s22/csci2600">Homework Server</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://submitty.cs.rpi.edu/courses/s22/csci2600/forum">Discussion Form</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div style="text-align: left;">
+    <h1 style="text-align: left;">Principles of Software CSCI-2600<br>
+      <br>
+    </h1>
+  </div>
+  <div id="office-hours">
+    <h2 style="text-align: left;">Weekly Schedule</h2>
+    <div id="weeklySchedule">
+      <img src="Images\office-hours.PNG">
+    </div>
+  </div>
+  <br />
+  <h2 style="text-align: left;">Class Topics Schedule</h2>
+  NB: The schedule is tentative and subject to change.
+  <br>
+  <iframe
+    src="https://calendar.google.com/calendar/embed?src=oh06ff7kf0s9f3p352b3th0hr0%40group.calendar.google.com&ctz=America%2FNew_York"
+    style="border: 0" scrolling="no" width="800" frameborder="0" height="600"></iframe>
+
+</body>
+
+<footer>
+  <div id="last updated">
+    RPI CSCI-2600 Last updated 1-17-2022
+  </div>
+</footer>
+
 </html>

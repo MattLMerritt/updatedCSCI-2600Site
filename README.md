@@ -6,6 +6,7 @@ is to make improvements to the GUI for the site inorder to improve aesthetic and
 
 ## To Do:
 - Test change in format for homework files
+- Add "Join Webex" buttons for each TA's and Mentor's Office Hours/Recitation Periods.
 - Change html contents and css source of Topics.html to current standard (bootstrap.css) and preserve abililty to easily update new visible contents by uncommenting prefilled sources. Sources include documents for future lessons, reccomended reading material, etc...
 
 ## Resources"

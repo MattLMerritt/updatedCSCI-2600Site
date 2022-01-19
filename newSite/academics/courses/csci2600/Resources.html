@@ -11,41 +11,41 @@
 
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-          <div id="navbarColor01">
-              <a class="navbar-brand" href="index.html">Principles of Software CSCI-2600</a>
-          </div>
-
-          <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home
-                      <span class="visually-hidden">(current)</span>
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="Resources.html">Resources</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="Homework.html">Homework</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="Schedule.html">Class Schedule</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="Topics.html">Class Topics</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="syllabus_CSCI_2600_Spring_2022.pdf">Syllabus</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="https://submitty.cs.rpi.edu/courses/s22/csci2600">Homework Server</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="https://submitty.cs.rpi.edu/courses/s22/csci2600/forum">Discussion
-                      Form</a>
-              </li>
-          </ul>
+    <div class="container-fluid">
+      <div id="navbarColor01">
+        <a class="navbar-brand" href="index.html">Principles of Software CSCI-2600</a>
       </div>
+
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Resources.html">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Homework.html">Homework</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Schedule.html">Class Schedule</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Topics.html">Class Topics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="syllabus_CSCI_2600_Spring_2022.pdf">Syllabus</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://submitty.cs.rpi.edu/courses/s22/csci2600">Homework Server</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://submitty.cs.rpi.edu/courses/s22/csci2600/forum">Discussion
+            Form</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
 
@@ -56,7 +56,9 @@
     </div>
     <div card>
       <div class="card mb-3">
-        <h3 class="card-header">Web Sites</h3>
+        <div class="card-header">
+          <h3>Web Sites</h3>
+        </div>
         <div Resource class="p-md-2">
           <class link>
             <h6><strong>Examples from lecture:</strong></h6>
@@ -71,27 +73,33 @@
     </div>
     <div card>
       <div class="card mb-3">
-        <h3 class="card-header">Books</h3>
-        <div book class="p-md-2">
-          <h4 class="card-title"><strong>Effective Java</strong></h4>
-          <img src="Images\bloch-sm.jpg" alt="book1" class="center">
-          <p>Effective Java, 3rd ed. by Bloch Addison-Wesley, 2008 ISBN 860-1300201986</p>
+        <div class="card-header">
+          <h3>
+            Books
+          </h3>
         </div>
-        <div book class="p-md-2">
-          <h4 class="card-title"><strong>Design Patterns: Elements of Reusable Object-Oriented Software</strong></h4>
-          <img src="Images\gamma-sm.jpg" alt="book2" class="center">
-          <p>Design Patterns: Elements of Reusable Object-Oriented Software, by Gamma, Helm, Johnson, and Vlissides
-            Addison-Wesley, 1995 ISBN 978-0201633610</p>
-        </div>
-        <div book class="p-md-2">
-          <h4 class="card-title"><strong>Refactoring: Improving the Design of Existing Code</strong></h4>
-          <img src="Images\fowler-sm.jpg" alt="book2" class="center">
-          <p>Refactoring: Improving the Design of Existing Code by Fowler Addison-Wesley, 1999 ISBN 978-0201485677</p>
-        </div>
-        <div book class="p-md-2">
-          <h4 class="card-title"><strong>A Philosophy of Software Design</strong></h4>
-          <img src="Images\philosophy.jpg" alt="book2" class="center">
-          <p>A Philosophy of Software Design by John Ousterhout Yaknyam Press ISBN-13: 978-1732102200</p>
+        <div id="books">
+          <div class="p-md-2" id="book1">
+            <h4 class="card-title"><strong>Effective Java</strong></h4>
+            <img src="Images\bloch-sm.jpg" alt="book1" class="center">
+            <p>Effective Java, 3rd ed. by Bloch Addison-Wesley, 2008 ISBN 860-1300201986</p>
+          </div>
+          <div class="p-md-2" id="book2">
+            <h4 class="card-title"><strong>Design Patterns: Elements of Reusable Object-Oriented Software</strong></h4>
+            <img src="Images\gamma-sm.jpg" alt="book2" class="center">
+            <p>Design Patterns: Elements of Reusable Object-Oriented Software, by Gamma, Helm, Johnson, and Vlissides
+              Addison-Wesley, 1995 ISBN 978-0201633610</p>
+          </div>
+          <div class="p-md-2" id="book3">
+            <h4 class="card-title"><strong>Refactoring: Improving the Design of Existing Code</strong></h4>
+            <img src="Images\fowler-sm.jpg" alt="book2" class="center">
+            <p>Refactoring: Improving the Design of Existing Code by Fowler Addison-Wesley, 1999 ISBN 978-0201485677</p>
+          </div>
+          <div class="p-md-2" id="book4">
+            <h4 class="card-title"><strong>A Philosophy of Software Design</strong></h4>
+            <img src="Images\philosophy.jpg" alt="book2" class="center">
+            <p>A Philosophy of Software Design by John Ousterhout Yaknyam Press ISBN-13: 978-1732102200</p>
+          </div>
         </div>
       </div>
     </div>

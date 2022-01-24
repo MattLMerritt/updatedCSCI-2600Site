@@ -7,7 +7,8 @@ is to make improvements to the GUI for the site inorder to improve aesthetic and
 ## To Do:
 - Implement abililty to easily update new visible contents by uncommenting prefilled sources. Sources include documents for future lessons, reccomended reading material, etc...
 - Resize Weekly Schedule to fit to page on "Class Schedule" page  (should get second opinions).
-- Automatically adjust photos in index.html to automatically adjust for extreme zoom/phone viewing.
 
 ## Resources"
 - https://images.nasa.gov/details-iss040e010458
+- Bootswatch under MIT License
+  - https://github.com/thomaspark/bootswatch/blob/v5/LICENSE

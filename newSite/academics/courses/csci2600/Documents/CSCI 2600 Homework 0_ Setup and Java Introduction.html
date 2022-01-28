@@ -1,0 +1,2081 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=windows-1252">
+    <title>CSCI 2600 Homework 0: Setup and Java Introduction</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Bill</o:Author>
+  <o:LastAuthor>Bill</o:LastAuthor>
+  <o:Revision>9</o:Revision>
+  <o:TotalTime>43</o:TotalTime>
+  <o:Created>2019-02-05T15:27:00Z</o:Created>
+  <o:LastSaved>2019-02-12T16:10:00Z</o:LastSaved>
+  <o:Pages>6</o:Pages>
+  <o:Words>1754</o:Words>
+  <o:Characters>9998</o:Characters>
+  <o:Company>Brown University</o:Company>
+  <o:Lines>83</o:Lines>
+  <o:Paragraphs>23</o:Paragraphs>
+  <o:CharactersWithSpaces>11729</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<!--link rel=themeData href="hw3_files/themedata.thmx">
+<link rel=colorSchemeMapping href="hw3_files/colorschememapping.xml"-->
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SplitPgBreakAndParaMark/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="371">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536869121 64767 1 0 415 0;}
+@font-face
+	{font-family:"Arial";
+	panose-1:2 11 6 6 3 5 4 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870161 1073750107 40 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-family:"Arial",sans-serif;
+	mso-fareast-theme-font:minor-fareast;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman",serif;
+	font-family:"Arial",sans-serif;
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-family:"Arial",sans-serif;
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h3
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman",serif;
+	font-family:"Arial",sans-serif;
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-family:"Arial",sans-serif;
+	mso-fareast-theme-font:minor-fareast;}
+code
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	font-family:"Courier New",sans-serif;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+pre
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:12.0pt;
+	font-family:"Courier New";
+	font-family:"Courier New",sans-serif;
+	mso-fareast-theme-font:minor-fareast;}
+tt
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	font-family:"Courier New",sans-serif;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	font-family:"Arial",sans-serif;
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#2E74B5;
+	mso-themecolor:accent1;
+	mso-themeshade:191;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	font-family:"Arial",sans-serif;
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#2E74B5;
+	mso-themecolor:accent1;
+	mso-themeshade:191;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	font-family:"Arial",sans-serif;
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#1F4D78;
+	mso-themecolor:accent1;
+	mso-themeshade:127;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	font-family:"Arial",sans-serif;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Consolas;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-family:"Arial",sans-serif;
+	mso-fareast-theme-font:minor-fareast;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:12.0pt;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:321390177;
+	mso-list-template-ids:-248879704;}
+@list l0:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:424233178;
+	mso-list-template-ids:528781062;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:469369802;
+	mso-list-template-ids:810838558;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l3
+	{mso-list-id:1054354657;
+	mso-list-template-ids:-667150306;}
+@list l3:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Wingdings;}
+@list l3:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:1379545141;
+	mso-list-template-ids:482751146;}
+@list l4:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5
+	{mso-list-id:1497040962;
+	mso-list-template-ids:287327180;}
+@list l5:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+  </head>
+  <body dir="ltr" lang="en-US">
+    <div id="header" dir="ltr">
+      <p>CSCI 2600 Principles of Software</p>
+      <h1><!-- omit from toc -->Homework 0: Setup and Java Introduction
+      </h1>
+      <h2 class="western"><!-- omit from toc -->Due: Tuesday, Jan. 25 @
+        11:59 pm EST </h2>
+    </div>
+    <p>The purpose of this assignment is to help you set up your
+      development environment, get acquainted with Java, and introduce
+      you to tools we will be using throughout the rest of this class. </p>
+    <p>If you would like to get more practice with Java, then we
+      recommend trying Oracle's Java tutorials we mention under <a
+        href="#Problem4">Problem 4</a>. Try to complete Homework 0
+      first, so you can use the tools we describe here when doing the
+      examples in Oracle's tutorial. </p>
+    <p>If you are having trouble with this assignment, get in touch with
+      us immediately so we can get you back on track.<!-- (Not true in 11wi.)
+<p>
+The first section will consist of the staff in the lab making
+sure people get a solid start on this assignment.
+</p>
+--><!-- *********************GETTING STARTED*********************** -->
+    </p>
+    <h2 class="western"><a name="getting_started"></a>Getting Started</h2>
+    <p>The URI that you will need to use to clone your personal repo for this homework would have the form of
+    <tt class="western">https://submitty.cs.rpi.edu/git/s22/csci2600/hw00/RCSID</tt> where <tt class="western">RCSID</tt> is your RCS ID.</p>
+    <p>In what follows, we assume that you have Eclipse and Git properly
+      installed, and you have checked out project csci2600-hw0. If you
+      encountered problems, please contact the TAs or the instructors
+      immediately.</p>
+    <p>Throughout the course you will receive starter code and submit
+      your assignments through Git. Git is a version control system that
+      allows software engineers to backup, manage, and collaborate on
+      large software projects. </p>
+    <p>The instructions in the <a
+href="https://www.cs.rpi.edu/academics/courses/spring22/csci2600/Documents/eclipse_and_git.pdf">Setup
+
+
+
+        handout</a> outline basic Git commands, Eclipse, and JUnit.
+      Throughout this homework we explain Git commands, Eclipse, and
+      JUnit in context.</p>
+    <h2 class="western"><a name="Problem1"></a><!-- ************************PROBLEM 1****************************** -->Problem
+1:
+
+
+
+      Your first Java class &#8212; RandomHello</h2>
+    <p>Create your Java class with a <tt class="western">main</tt>
+      method that will randomly choose and then print to the console one
+      of five possible greetings that you define.</p>
+    <p>Create the file <tt class="western">RandomHello.java</tt>, which
+      will define a Java class named <tt class="western">RandomHello</tt>
+      that will reside in the Java package <tt class="western">hw0</tt>.
+      (Assuming your repository is checked into <code>csci-2600/hw0</code>,
+      the file name would be <tt class="western"><em>csci-2600/hw0</em></tt><tt
+        class="western">/src/main/java/hw0/RandomHello.java</tt>.) To
+      create a new Java class file, go to Package Explorer and select
+      package <tt class="western">hw0</tt> under the <tt
+        class="western">src/main/java</tt>, then select <b>File -&gt;
+        New -&gt; Class</b>. Specify the enclosing package <tt
+        class="western">hw0</tt> and class name <tt class="western">RandomHello</tt>.
+    </p>
+    <p>Java requires every runnable class to contain a <tt
+        class="western">main</tt> method whose signature is <tt
+        class="western">public static void main(String[] args)</tt>. A
+      code skeleton for the <tt class="western">RandomHello</tt> class
+      is shown below. Eclipse will generate some of this skeleton for
+      you when you create the new <tt class="western">RandomHello</tt>
+      class. Add a public method called getGreeting() as shown below.</p>
+    <p><tt class="western">RandomHello.java</tt>:</p>
+    <pre class="western">package hw0;
+
+/**
+ * RandomHello selects a random greeting to display to the user.
+ */
+public class RandomHello {
+
+    /**
+     * Uses a RandomHello object to print
+     * a random greeting to the console.
+     */
+    public static void main(String[] argv) {
+        RandomHello randomHello = new RandomHello();
+        System.out.println(randomHello.getGreeting());
+    }
+
+    /**
+     * @return a random greeting from a list of five different greetings.
+     */
+    public String getGreeting() {
+        // YOUR CODE GOES HERE
+    }
+}</pre>
+    <p> This skeleton is meant only to serve as a starting point; you
+      are free to organize it as you see fit. </p>
+    <h3 class="western"><a name="wheel-reinvention"></a>No Need to
+      Reinvent the Wheel</h3>
+    <p>Don't write your own random number generator to decide which
+      greeting to select. Instead, take advantage of Java's <a
+        href="http://docs.oracle.com/javase/8/docs/api/java/util/Random.html">Random</a>
+      class. (This is a good example of the adage "Know and Use the
+      Libraries" as described in Chapter 7 of Joshua Bloch's <i>Effective
+
+
+
+        Java</i>. Learning the libraries will take some time, but it's
+      worth it!)</p>
+    <p>Type the following into the body of your <tt class="western">getGreeting()</tt>
+      method: </p>
+    <pre class="western" style="margin-bottom: 0.2in">Random randomGenerator = new Random();</pre>
+    <p> This line creates a random number generator; not a <i>random
+        number</i>, but a Java object that can <i>generate</i>
+      random numbers. In Eclipse, your code may be marked as an error by
+      a red underline. This is because the <tt class="western">Random</tt>
+      class is defined in a package that has not yet been imported. <tt
+        class="western">java.lang</tt> and <tt class="western">hw0</tt>
+      are the only packages that are implicitly imported. Java
+      libraries are organized as packages and you can only access Java
+      classes in packages that are imported. To import <tt
+        class="western">java.util.Random</tt>, add the following line
+      under the line <tt class="western">package hw0;</tt> at the top
+      of your file (after the <tt class="western">package hw0;</tt>
+      declaration):</p>
+    <pre class="western" style="margin-bottom: 0.2in">import java.util.Random;</pre>
+    <p> This will import the class <a
+        href="http://docs.oracle.com/javase/8/docs/api/java/util/Random.html">Random</a>
+      into your file. To automatically add all necessary imports and
+      remove unused imports, Eclipse lets you type <b>CTRL-SHIFT-O</b>
+      to <i><b>O</b></i><i>rganize</i> your imports. Because there is
+      only one class named <tt class="western">Random</tt>, Eclipse
+      will figure out that you mean to import <tt class="western">java.util.Random</tt>
+      and will add the above line of code automatically. If the name of
+      the class to be imported is ambiguous &#8212; for example,
+      there is a <font color="#000000"><span style="text-decoration:
+          none"><a
+            href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">java.util.List</a>
+        </span></font>as well as a <a
+        href="http://docs.oracle.com/javase/8/docs/api/java/awt/List.html">java.awt.List</a>
+      &#8212; then Eclipse will prompt you to choose the one to import.</p>
+    <h3 class="western"><a name="using-random"></a>Using
+      java.util.Random</h3>
+    <p>Read the documentation for <tt class="western">Random</tt>'s <tt
+        class="western">nextInt(int n)</tt> method by going to the <a
+        href="http://docs.oracle.com/javase/8/docs/api/">Java API</a>
+      and selecting <tt class="western">Random</tt> from the list of
+      classes in the left-hand frame. Many classes also allow you to
+      pull up documentation directly in Eclipse. Just hover over the
+      class or method name and press SHIFT+F2. </p>
+    <p>Use the <tt class="western">nextInt(int n)</tt> method to choose
+      your greeting. You don't have to understand all the details of its
+      behavior specification, only that it returns a random number from
+      0 to n-1. </p>
+    <p>One way to choose a random greeting is using an array. This
+      approach might look something like: </p>
+    <pre class="western">String[] greetings = new String[5];
+greetings[0] = "Hello, World";
+greetings[1] = "Hola Mundo";
+greetings[2] = "Bonjour, le Monde";
+greetings[3] = "Hallo Welt";
+greetings[4] = "Ciao Mondo";</pre>
+    <p> The <tt class="western">main</tt> method in the skeleton code
+      above prints the value returned by <tt class="western">getGreeting</tt>.
+      So if you insert code in <tt class="western">getGreeting</tt> to
+      select a greeting randomly, when the class is run it will print
+      that greeting. </p>
+    <p>When you are finished writing your code and it compiles, run it
+      several times to ensure that all five greetings can be displayed.
+      To run select <tt class="western">RandomHello.java</tt> in
+      Package Explorer and then choose <b>Run -&gt; Run</b> from the main menu,
+      or right-click on <tt class="western">RandomHello.java</tt> in
+      Package Explorer, then select <b>Run As -&gt; Java Application</b>.
+
+
+    </p>
+    <p>Next, add your new file to version control, commit it into your
+      local repository, and push to the repository on the server. Follow
+      the <a
+href="https://www.cs.rpi.edu/academics/courses/spring22/csci2600/Documents/eclipse_and_git.pdf">Setup</a>
+      handout for the relevant Git commands. </p>
+    <p>For Problems 2-4, <b>DO NOT</b> edit files with test cases:
+      FibonacciTest.java, BallTest.java, BallContainerTest.java, and
+      BoxTest.java. If you do, you may make all your test cases run
+      successfully on your local machine. However, when you submit your
+      assignment to Submitty, we will be using our own original copies
+      of all test cases for autograding, not the ones you might have committed
+      to your repository. It might lead to your code failing
+      some or all the test cases on Submitty despite the fact that
+      the entire test suite ran successfully on your local machine. </p>
+    <h2 class="western"><a name="Problem2"></a><!-- ************************PROBLEM 2****************************** -->Problem
+2:
+
+
+
+      Testing Java Code with JUnit</h2>
+    <p><!-- <div style="float:right; margin-left:10px;"><img src="junit_failure.png" alt="Screenshot: Run Junit from Eclipse" /></div>-->Part
+of
+
+
+
+      your job as a software engineer is to verify that the software you
+      produce works according to its specification. One form of
+      verification is testing. <a href="https://junit.org/junit4/">JUnit</a> is
+      a framework for creating <em>unit</em> tests in Java. A unit test
+      is a test for verifying that a given method in a class conforms to
+      its specification. In this problem, we will provide you with a
+      quick overview and simple example of how JUnit works. (Later
+      homework assignments will look more deeply into unit testing.) </p>
+    <p>Open both <tt class="western">src/main/java/hw0/Fibonacci.java</tt>
+      and <tt class="western">src/test/java/hw0/FibonacciTest.java</tt>.
+      From the comments, you can see that <tt class="western">FibonacciTest</tt>
+      is a test of the <tt class="western">Fibonacci</tt> class. </p>
+    <p>Now run <tt class="western">FibonacciTest</tt>. Right-click on
+      <tt class="western">FibonacciTest.java</tt>, then select <b>Run
+        As -&gt; JUnit test</b>. If you don't see <b>Run As -&gt;
+        JUnit test </b><span style="font-weight: normal">when you
+        right-click, right-click on the project name in the Package
+        Explorer and select </span><b>Properties</b><span
+        style="font-weight: normal">. Select </span><b>Java Build Path</b><span
+        style="font-weight: normal">, and click the </span><b>Add
+        Library</b> <span style="font-weight: normal">button. Select </span><b>Junit</b>
+      <span style="font-weight: normal">and click </span><b>Next</b><span
+        style="font-weight: normal">. Select </span><b>Junit 4 </b><span
+        style="font-weight: normal">(not Junit 5) and click </span><b>Finish</b><span
+        style="font-weight: normal">. Click the </span><b>Apply and
+        Close</b> <span style="font-weight: normal">button.</span></p>
+    <p>A window or panel with a menacing red bar will appear, indicating
+      that some of the tests in <tt class="western">FibonacciTest</tt>
+      did not complete successfully. The top pane displays the list of
+      tests that failed, while the bottom pane shows the Failure Trace
+      for the highlighted test. The first line in the Failure Trace
+      should display an error message that explains why the test failed.
+      It is the responsibility of the author of the test code to
+      produce this error message.</p>
+    <p>If you click on the failure <tt class="western">testThrowsIllegalArgumentException()</tt>,
+      the bottom pane will switch to the appropriate error message. In
+      this example, the first line of the failure trace shows that <tt
+        class="western">Fibonacci.java</tt> improperly threw an <tt
+        class="western">IllegalArgumentException</tt> when tested with
+      zero (0) as its argument. (You may have to scroll the pane to the
+      right to see this). If you double-click on the name of a test in
+      the top pane, Eclipse will jump to the line where the failure
+      occurred in the editor pane. Figure out the problem in <tt
+        class="western">Fibonacci.java</tt>, fix it, and rerun the JUnit
+      test. Eclipse will automatically rebuild when you make changes. </p>
+    <p>Use the information in the Failure Trace box to help you continue
+      debugging <tt class="western">Fibonacci</tt>. Keep a record of
+      what you did to debug <tt class="western">Fibonacci</tt> as you
+      will have to answer questions about your debugging experience in
+      the next problem. After you have fixed all the problems in <tt
+        class="western">Fibonacci</tt>, you should see a bright green
+      bar instead of a red one when you run <tt class="western">FibonacciTest</tt>.
+    </p>
+
+     For Problem 3 and Problem 4 submit your answers as .PDF files named <span
+     style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
+     "Times New Roman"'>hw0_problem3.pdf</span><span style='mso-fareast-font-family:
+     "Times New Roman"'> and <span
+     style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
+     "Times New Roman"'>hw0_problem4.pdf</span><span style='mso-fareast-font-family:
+     "Times New Roman"'> in<span style='mso-spacerun:yes'>  </span>the </span><tt><span
+     style='font-size:10.0pt'>answers/</span></tt><span style='mso-fareast-font-family:
+     "Times New Roman"'> directory of your repository.<br/>
+     
+     <b>You MUST type up your answers. Handwritten solutions will not be accepted or graded, 
+     even if they are scanned into a PDF file.</b> <br/>
+     We recommend using <a href="https://www.latex-project.org/">LaTeX</a>. If you have never 
+     used LaTeX, take a look at this <a href="https://www.latex-tutorial.com/tutorials/">tutorial</a>.
+
+    <h2 class="western"><a name="Problem3"></a><!-- TODO: Figure out what to do with this!
+<p> Now look at
+the JUnit tests that we wrote for <tt>HolaWorld</tt> and
+<tt>RandomHello</tt> in <a href="#Problem5">Problem 5</a> earlier. They are called
+<tt>HolaWorldTest</tt> and <tt>RandomHelloTest</tt>,
+respectively. Ensure that your modified code passes these tests
+before you turn in your homework.</p>
+-->
+<!-- ***********************PROBLEM 6******************************** -->Problem 3:
+
+
+
+      Answering Questions About the Code</h2>
+    <p>In a newly created file (e.g., if you are using LaTeX it would be named <tt class="western">hw0_problem3.tex</tt>)
+      answer some questions about the <tt class="western">Fibonacci</tt> class. Make sure that
+      this file is placed in the <tt class="western">answers/</tt> directory of your project.
+      This will ensure that the PDF file which you generate (e.g., <tt class="western">
+      answers/hw0_problem3.pdf</tt>) is also placed in the <tt class="western">answers/</tt> directory.
+      Most programming homework assignments that you will be given will
+      require you to submit some sort of a response or write-up in
+      addition to your code. Write your answers to the following questions:</p>
+    <ol>
+      <li>
+        <p style="margin-bottom: 0in">Why did Fibonacci fail the <b>testThrowsIllegalArgumentException</b>
+          test? What did you have to do to fix it?</p>
+      </li>
+      <li>
+        <p style="margin-bottom: 0in">Why did Fibonacci fail the <b>testBaseCase</b>
+          test? What (if anything) did you have to do to fix it?</p>
+      </li>
+      <li>
+        <p>Why did Fibonacci fail the <b>testInductiveCase</b> test?
+          What (if anything) did you have to do to fix it?</p>
+      </li>
+    </ol>
+
+
+    <p> Generate a PDF file from the file with your answers. E.g., if you are using LaTeX, run
+    <tt class="western">pdflatex</tt> command or use your LaTeX editor to create
+    <tt class="western">answers/hw0_problem3.pdf</tt>. Make sure to add this PDF file to Git index
+    as described in <a href="#Problem5">Problem 5</a>. <b>You MUST
+    ensure that your repository contains required PDF files. We will not be able to grade your source answer
+    files (like <tt class="western">.tex</tt> or <tt class="western">.docx</tt>).</b> PDF files that you submit
+    must be real PDF documents. Merely renaming your <tt class="western">.tex</tt> or <tt class="western">.docx</tt>
+    files so that they have a PDF extension will not make them actual PDF documents,
+    and we will be unable to grade them.</p>
+
+    <h2 class="western"><a name="Problem4"></a><!-- ***************************PROBLEM 4**************************** -->Problem
+4:
+
+
+      Getting a Real Taste of Java &#8212; Balls and Boxes</h2>
+    <p>Until now, we have only been introducing tools. In this problem,
+      we will delve into a real programming exercise. If you are not
+      familiar with Java, we recommend working through the Oracle's <a
+        href="http://docs.oracle.com/javase/tutorial/java/index.html">Learning
+the
+
+
+
+        Java Language tutorial</a>. Skip the section on generics for
+      now. Fragments of Oracle's <a
+        href="http://docs.oracle.com/javase/tutorial/">other tutorials</a>
+      may also be useful, specifically "Getting Started", "Essential
+      Java Classes", and "Collections". </p>
+    <p>This problem is intended to give you a better sense of what Java
+      programming entails. This problem can be somewhat challenging.
+      Don't be discouraged, we're here to help. And we expect that time
+      spent now will pay off significantly during the rest of the
+      course. </p>
+    <p>As you work on this problem, record your answers to different
+      parts of this problem in <tt class="western">hw0_problem4.pdf</tt> in the
+      project's <tt class="western">answers</tt> folder. When you are done,
+      make sure that your <tt class="western">hw0_problem4.pdf</tt> contains
+      clearly marked answers to Problem 4.1, Problem 4.2, and Problem 4.3.</p>
+    <ol>
+      <li>
+        <p><b>Warm-Up: Creating a Ball</b>: </p>
+        <p>Take a look at <tt class="western">src/main/java/hw0/Ball.java</tt>.
+          A <tt class="western">Ball</tt> is a simple object that has
+          the volume and the color.</p>
+        <ul>
+          <li>
+            <p>What is wrong with <tt class="western">Ball.java</tt>?
+              Please fix the problems with <tt class="western">Ball.java</tt>
+              and document your work in <tt class="western">hw0_problem4.pdf</tt>.
+            </p>
+          </li>
+        </ul>
+        <p>We have included a JUnit test called <tt class="western">src/test/java/hw0/BallTest.java</tt>
+          to help you out. In Eclipse, one of its warnings should help
+          you find at least one of the bugs without referring to the
+          JUnit results. Warnings are indicated by a small yellow marker to
+          the left of the line number. Moving the mouse over the marker will
+          show you the warning. Clicking on the marker will give you hints
+          about possible ways to modify the code to resolve the warning.</p>
+      </li>
+      <li>
+        <p><b>Using Pre-Defined Data Structures</b>: </p>
+        <p>Next, we want to create a class called <tt class="western">BallContainer</tt>.
+          As before, skeleton code is provided (see <tt class="western">BallContainer.java</tt>).
+
+
+
+
+          A BallContainer is a container for Balls. BallContainer must
+          support the following methods and your task is to fill in the
+          code that will implement all these methods correctly:</p>
+        <ul>
+          <li>
+            <p style="margin-bottom: 0in"><tt class="western">add(Ball)</tt>
+            </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in"><tt class="western">remove(Ball)</tt>
+            </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in"><tt class="western">getVolume()</tt>
+            </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in"><tt class="western">size()</tt>
+            </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in"><tt class="western">differentColors()</tt>
+            </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in"><tt class="western">areSameColor()</tt>
+            </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in"><tt class="western">clear()</tt>
+            </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in"><tt class="western">contains(Ball)</tt>
+            </p>
+          </li>
+        </ul>
+        <p>The specifications for these methods are found in the code of
+          <tt class="western">BallContainer.java</tt>. </p>
+        <p>In BallContainer, we use a <a
+            href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html">java.util.Set</a>
+          to keep track of the balls. This is a great example of using a
+          predefined Java data structure to save yourself significant
+          work. </p>
+        <p>Before implementing each method, read the documentation for <tt
+            class="western">Set</tt>. Some of your methods will be as
+          simple as calling the appropriate predefined methods for the <a
+href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html">Set</a>.
+          To help you out, we included a JUnit test called <tt
+            class="western">src/test/java/hw0/BallContainerTest.java</tt>.</p>
+        <p>Before you start coding, please take time to think about the
+          following question which you need to answer in the PDF
+          file:</p>
+        <blockquote style="margin-bottom: 0in">There are two obvious
+          approaches to implementing <tt class="western">getVolume()</tt>:
+        </blockquote>
+        <ul>
+          <li>
+            <blockquote style="margin-bottom: 0in">Every time <tt
+                class="western">getVolume()</tt> is called, go through
+              all the Balls in the <tt class="western">Set</tt> and add
+              up the volumes. <b>Hint:</b> one solution might be to use
+              a <a
+href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/foreach.html">for-each
+
+
+
+
+                loop</a> to extract <tt class="western">Ball</tt>s from
+              the <tt class="western">Set</tt>. </blockquote>
+          </li>
+          <li>
+            <blockquote>Keep track of the total volume of the Balls in <tt
+                class="western">BallContainer</tt> whenever Balls are
+              added and removed. This eliminates the need to perform any
+              computations when <tt class="western">getVolume()</tt> is
+              called. </blockquote>
+          </li>
+        </ul>
+        <blockquote>Which approach do you think is the better one? Why?
+        Include your answer in <tt class="western">hw0_problem4.pdf</tt>.</blockquote>
+      </li>
+      <li>
+        <p><b>Implementing a Box</b>: </p>
+        <p>In this problem, you will do a little more design and
+          thinking and a little less coding. You will implement the <tt
+            class="western">Box</tt> class. A Box is also a container
+          for Balls. The key difference between a <tt class="western">Box</tt>
+          and a <tt class="western">BallContainer</tt> is that a Box
+          has only finite volume. Once a box is full, we cannot put in
+          more Balls. The size (volume) of a Box is defined when the
+          constructor is called:</p>
+        <pre class="western" style="margin-bottom: 0.2in">public Box(double volume);</pre>
+        <p> Since a <tt class="western">Box</tt> is in many ways
+          similar to a <tt class="western">BallContainer</tt>, we
+          internally keep track of many things in the <tt
+            class="western">Box</tt> with a <tt class="western">BallContainer</tt>,
+          allowing us to reuse code. Many of the methods in <tt
+            class="western">Box</tt> can simply "delegate" to the
+          equivalent in <tt class="western">BallContainer</tt>; for
+          example, removing from a <tt class="western">Box</tt> cannot
+          cause it to exceed its volume limit. This design of having one
+          class contain an object of another class and reusing many of
+          the latter class's methods is called <b>composition</b>. </p>
+        <p><b>Optional Note</b>: If you are familiar with Java, you may
+          wonder why we did not simply make <tt class="western">Box</tt>
+          extend <tt class="western">BallContainer</tt> via
+          "inheritance"; that is, why did we not make <tt
+            class="western">Box</tt> a subclass of <tt class="western">BallContainer</tt>.
+          We will discuss this much more deeply later in the course, but
+          the key idea is that <tt class="western">Box</tt> is not what
+          we call a true subtype of <tt class="western">BallContainer</tt>
+          because it is in fact more limited than <tt class="western">BallContainer</tt>.
+          A <tt class="western">Box</tt> can only hold a limited
+          amount; hence, a user who uses a <tt class="western">BallContainer</tt>
+          in their code can not simply substitute a <tt
+            class="western">BallContainer</tt> with a <tt
+            class="western">Box</tt> and assume the same behavior in the
+          program. The code may cause the Box to fill up, but they did
+          not have this concern when using a <tt class="western">BallContainer</tt>.
+
+          For this reason, it is not a good idea to make <tt
+            class="western">Box</tt> extend <tt class="western">BallContainer</tt>.
+
+
+
+        </p>
+        <p>In addition to the constructor described above, you will need
+          to implement the following new methods in <tt class="western">Box</tt>:
+        </p>
+        <ul>
+          <li>
+            <p style="margin-bottom: 0in"><tt class="western">add(Ball)</tt>
+            </p>
+          </li>
+          <li>
+            <p><tt class="western">getBallsFromSmallest()</tt> </p>
+          </li>
+        </ul>
+        <p>The specifications for these methods can be found in the code
+          of <tt class="western">Box</tt>. </p>
+        <p>A few things to consider before you start writing code: </p>
+        <ul>
+          <li>
+            <p style="margin-bottom: 0in">You should not implement your
+              own sorting algorithm. Instead, take advantage of the Java
+              API (remember, "Know and Use the Libraries"). </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in">Also, you shouldn't need to
+              change your implementation of <tt class="western">BallContainer</tt>
+              or <tt class="western">Ball</tt> for this problem. In
+              particular, you should not implement the <tt
+                class="western"><a
+href="http://download.oracle.com/javase/8/docs/api/java/lang/Comparable.html">Comparable</a></tt>
+              interface. If you are tempted to do so, consider using <tt
+                class="western"><a
+href="http://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html">Comparator</a></tt>
+              instead. <tt class="western">Comparator</tt> is a
+              companion interface to <tt class="western">Comparable</tt>
+              and is used throughout the Java libraries: check out the
+              sort methods in <tt class="western"><a
+href="http://download.oracle.com/javase/8/docs/api/java/util/Collections.html">java.util.Collections</a></tt>
+              as an example. </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in">If you do make any changes to
+              <tt class="western">BallContainer</tt> or <tt
+                class="western">Ball</tt> for this problem, then
+              explicitly document what changes you made and why in <tt
+                class="western">hw0_problem4.pdf</tt>. </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in">Be cautious if you plan on
+              using Java <tt class="western">TreeSet</tt>; remember
+              that <tt class="western">TreeSet</tt> does not store
+              duplicates, and if you provide a <tt class="western">TreeSet</tt>
+              with a <tt class="western">Comparator</tt>, it will use
+              that <tt class="western">Comparator</tt> to determine
+              duplication. See the <a
+                href="http://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html">TreeSet</a>
+              API documentation for more details. </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in">Before you start working on <tt
+                class="western">getBallsFromSmallest()</tt>, we strongly
+              recommend that you consider using <a
+                href="http://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html">Iterator</a>.
+            </p>
+          </li>
+          <li>
+            <p style="margin-bottom: 0in">The JUnit test <tt
+                class="western">src/test/java/hw0/BoxTest.java</tt>
+              should help you out. However, we do not guarantee that the
+              tests we provide will catch all bugs in your program. </p>
+          </li>
+          <li>
+            <p>Don't forget to commit and push your code more than
+              occasionally. </p>
+          </li>
+        </ul>
+        <p>Also, take some time to answer the following questions in
+          your PDF file: </p>
+        <ul>
+          <li>
+            <p style="margin-bottom: 0in">There are many ways to
+              implement <tt class="western">getBallsFromSmallest()</tt>.
+              Briefly describe at least two different ways. Your answers
+              should differ in the implementation of <tt
+                class="western">Box</tt>, not in lower-level
+              implementation (for example, using an insertion sort
+              instead of a selection sort is a lower-level
+              implementation because it does not affect how <tt
+                class="western">Box</tt> is implemented). Hint: think
+              about different places in the <tt class="western">Box</tt>
+              class where you could add code to achieve the desired
+              functionality. </p>
+          </li>
+          <li>
+            <p>Which of the above ways do you think is the best? Why? </p>
+          </li>
+        </ul>
+        <p>There is no single <b>correct</b> answer. Our intent is to
+          help you fight that urge to code up the first thing that comes
+          to mind. Remember: <b>More thinking, less coding</b>. </p>
+      </li>
+    </ol>
+    <h2 class="western"><a name="Problem5"></a><!-- *****************************PROBLEM 5**************************** -->Problem
+5:
+
+
+
+      Turning In Your Homework</h2>
+    <p>Each homework will indicate exactly what you need to turn in a
+      Section entitled <b>What to Turn In</b> (see below).</p>
+    <p><!-- <p>If you add a new file, you must explicitly add it to your SVN
+repository. This means that you need to tell SVN to "track this file"
+as part of the repository. In addition, you need
+to <b><a href="http://www.cs.rpi.edu/~milanova/csci2600/EditingCompilingWithEclipse.html#Commit">commit</a></b>
+the file to actually put the contents in the repository. Make sure
+that, when you're done, your working copy is committed to the
+repository so that we get and grade your most up-to-date version.
+</p>
+
+<p>Since files like <tt>RandomHello.java</tt>, <tt>problem3.txt</tt>
+and <tt>problem4.txt</tt> are not in your SVN repository, you must add
+them. You also want to commit the changes you made to
+<tt>Fibonacci.java</tt>, <tt>Ball.java</tt>,
+<tt>BallContainer.java</tt>, and <tt>Box.java</tt>. </p>
+-->Make sure that you have added all new files to version control (e.g.,
+      <tt class="western">RandomHello.java</tt>, <tt class="western">answers/hw0_problem3.pdf</tt>,
+      and <tt class="western">answers/hw0_problem4.pdf</tt>) by right clicking
+      on the file name in the Eclipse Project Explorer and selecting
+      <b>Team/Add to Index</b>. In Eclipse,
+      right-click on project <tt class="western">csci2600-hw0</tt>,
+      then select <b>Team -&gt; Commit</b> to commit all changes. Don't
+      forget to push into the remote repository on the server:
+      right-click on project <tt class="western">csci2600-hw0</tt>,
+      then select <b>Team -&gt; Push to Upstream</b>. </p>
+    <p>After completing these steps, all your code and materials to turn
+      in should be in your Git repository on the server. Proceed to the
+      <a href="https://submitty.cs.rpi.edu/courses/s22/csci2600">Submitty</a>
+      to complete the submission of the assignment! </p>
+    <p><b>IMPORTANT:</b> Make sure that you have the correct folder
+      structure. If you break the structure, compilation on the Submitty
+      server will fail resulting in a grade of 0. At this point, you
+      must have project <tt class="western">csci2600-hw0</tt> with
+      subfolders <tt class="western">src,</tt>&nbsp; <tt
+        class="western">answers</tt>,&nbsp; and <tt class="western">docs</tt>.
+      Folder <tt class="western">src</tt> must have subfolders <tt
+        class="western">main</tt> and <tt class="western">test</tt>
+      each of which, in turn, must have subfolders <tt class="western">java</tt>
+      and <tt class="western">resources</tt>. Folders named <tt
+        class="western">java</tt> must have subfolders <tt
+        class="western">hw0</tt>. These show as <tt class="western">hw0</tt>
+      subfolders of <tt class="western">src/test/java</tt> and <tt
+        class="western">src/main/java</tt> in Package Explorer. Java
+      classes (e.g., <tt class="western">Ball.java</tt>) must be in <tt
+        class="western">src/main/java/hw0</tt>, your PDF files (<tt
+        class="western">hw0_problem3.pdf</tt> and <tt class="western">hw0_problem4.pdf</tt>)
+      must be in <tt class="western">answers</tt> and all JUnit test
+      classes (e.g., <tt class="western">BallTest.java</tt>) must be in
+      <tt class="western">src/test/java/hw0</tt>.<br>
+    </p>
+    <p><font color="#ff0000" size="+1"><b>You must click the Grade My
+          Repository button for you answers to be graded. If you do not,
+          they will not be graded and you will receive a zero for the
+          homework.</b></font><b></p>
+    <p>For this and all other homework assignments,
+          Submitty is configured to allow 20 grading attempts without penalty.
+          For all submissions starting from the 21st, there will be a small penalty
+          charged for each additional submission.</b></p>
+    <h2 class="western"><a name="turnin"></a>What to Turn In</h2>
+    <p>We should be able to find the following folders and files in your
+      <tt class="western">csci2600-hw0</tt> folder:</p>
+    <ul>
+      <li>
+        <p style="margin-bottom: 0in"><tt class="western">src/main/java/hw0/RandomHello.java</tt>
+          that prints out one of five random messages when its <tt
+            class="western">main</tt> method is executed. </p>
+      </li>
+      <li>
+        <p style="margin-bottom: 0in"><tt class="western">src/main/java/hw0/Fibonacci.java</tt>
+          that passes all four tests in <tt class="western">src/test/java/hw0/FibonacciTest.java</tt>.
+          Note that you should <b>NOT</b> edit <tt class="western">src/test/java/hw0/FibonacciTest.java</tt>
+          to accomplish this task.</p>
+      </li>
+      <li>
+        <p style="margin-bottom: 0in"><tt class="western">src/main/java/hw0/Ball.java</tt>,
+          <tt class="western">src/main/java/hw0/BallContainer.java</tt>,
+          and <tt class="western">src/main/java/hw0/Box.java</tt> that
+          pass their respective JUnit tests. Again, you should not
+          modify JUnit tests, though you are most welcome to read the
+          source code to understand what they test for.</p>
+      </li>
+      <li>
+        <p><tt class="western">answers/hw0_problem3.pdf</tt> and <tt
+            class="western">answers/hw0_problem4.pdf</tt> containing answers
+          to the questions in Problems 3 and 4. </p>
+      </li>
+    </ul>
+    <h2 class="western"><a name="turnin1"></a>Grade Breakdown</h2>
+    <p>This homework is worth 50 points. Submitty server runs the
+      provided JUnit tests plus a few additional tests. Test and debug
+      your code in Eclipse before committing and submitting to Submitty!
+      If your code passes all tests in Eclipse, then chances are it will
+      pass them on the Submitty server, too. </p>
+    <ul>
+      <li>
+        <p style="margin-bottom: 0in"><tt class="western">RandomHello</tt>:
+          2 pts </p>
+      </li>
+      <li>
+        <p style="margin-bottom: 0in">Compilation: 4 pts (autograded) </p>
+      </li>
+      <li>
+        <p style="margin-bottom: 0in"><tt class="western">FibonacciTest</tt>
+          JUnit tests: 4 pts (each test 1 pt, autograded) </p>
+      </li>
+      <li>
+        <p style="margin-bottom: 0in"><tt class="western">BallTest</tt>:
+          3 pts (each test 1 pt, autograded) </p>
+      </li>
+      <li>
+        <p style="margin-bottom: 0in"><tt class="western">BallContainerTest</tt>:
+          10 pts (each test 1 pt, autograded) </p>
+      </li>
+      <li>
+        <p style="margin-bottom: 0in"><tt class="western">BoxTest</tt>:
+          8 pts (each test 1 pt, autograded) </p>
+      </li>
+      <li>
+        <p style="margin-bottom: 0in">Instructor <tt class="western">Ball</tt>
+          tests: 3 pts (each test 3 pts, autograded) </p>
+      </li>
+      <li>
+        <p style="margin-bottom: 0in">Instructor <tt class="western">BallContainer</tt>
+          tests: 3 pts (each test 3 pts, autograded) </p>
+      </li>
+      <li>
+        <p style="margin-bottom: 0in">Instructor <tt class="western">Box</tt>
+          tests: 3 pts (each test 3 pts, autograded) </p>
+      </li>
+      <li>
+        <p style="margin-bottom: 0in">Answers to Problem 3 questions: 3
+          pts </p>
+      </li>
+      <li>
+        <p>Answers to Problem 4 questions: 7 pts </p>
+      </li>
+    </ul>
+    <p><!-- <p>Please include your first and last name in every text file you turn
+in (i.e., files ending with <tt>.txt</tt>).</p>
+--><!-- TODO. Figure this out! Activate in fugure.
+<h2 id="optional-problems">Optional Tutorial Problems</h2>
+<p>
+If you have not had much experience with Java, we recommend that you do
+these extra <a href="optional-problems.html">Optional Problems</a>
+(source code for these problems can be found in the <tt>hw0.optional</tt>
+package that came with your <tt>hw0</tt> checkout).
+If you do not know Java well, and we are going too fast, 
+the optional problems will help you become more comfortable with Java.
+</p>
+--><!-- <h2 id="debugger">Optional Debugger Tutorial</h2>
+<p>
+In this part, you will learn to Eclipse's built-in debugger. As the name
+suggests, a debugger helps you debug your program by allowing you to "watch"
+your program as it executes, one line at a time, and inspect the state of
+variables along the way.  In the past, you may have
+used <tt>System.out.println()</tt> to probe the state of a variable or find out
+whether a particular line is reached. In that sense, debuggers are like an
+ultra-super-powerful <tt>System.out.println()</tt>.
+</p>
+
+<p>One of the most useful features of a debugger is the ability to
+set <em>breakpoints</em> in your program. When you run your program through the
+debugger, it will pause when it reaches a line with a breakpoint. You can
+inspect the current state of variables, then continue running your program
+normally or step through one line at a time to watch the variables change.</p>
+<ul>
+  <li>Open Adder.java. This simple program is supposed to print the sum of two
+  user-provided integers. Try running it a few times (or reading the source
+  code) and you'll see that it doesn't behave as expected.</li>
+  <li>Double-click in the left-hand margin of the class next to the
+  line <code>return x - y;</code> A blue circle should appear, indicating a
+  breakpoint. (Double-clicking again removes the breakpoint.)</li>
+  <li>Run the program in debug mode by using F11, <code>Run >> Debug</code>, or
+  the green bug icon in the toolbar. As before, enter two ints (say, 3 and 4) in
+  the console when prompted. When your program hits the breakpoint, Eclipse asks
+  if you want to open the Debug perspective. Choose yes.</li>
+  <li>The debug perspective looks overwhelming at first, but don't worry! In the
+  top-right panel, select the "Variables" tab and you'll see the names and
+  values of all variables in the current context. The top-left panel ("Debug")
+  shows where the program is currently paused, where the current method was
+  called, and so on. (This is called the stack trace). Double-click on a method
+  name to see the corresponding line in the panel below, where you can view and
+  edit your source code. Finally, the bottom-left panel shows the console
+  window.
+  <p><em>What are all the names and values listed in the "Variables" panel? What
+  does the "Debug" panel list as the current method and line number? (Write down
+  the text that was highlighted when the Debug perspective first
+  opened.)</em></p></li>
+  <li>Immediately above the "Debug" panel are several buttons for running your
+  program. Mouse over each one for a description. "Resume" (green arrow) causes
+  your program to continue executing normally until it finishes or hits another
+  breakpoint. If you want to monitor what happens shortly after the breakpoint,
+  use "Step Into" and "Step Over" (yellow arrows). "Step Over" executes the
+  current line and pauses on the next line. "Step Into" enters any method called
+  on the current line so you can execute that method line-by-line. (To finish
+  the current method and jump back to the caller, use "Step Out.") Hit "Step
+  Over" once to execute the <code>return</code> statement and
+  exit <code>computeSum</code>. Hit "Step Over" again to progress to the next
+  line.
+  <p><em>What are all the names and values listed in the "Variables" panel after
+  EACH of the two step overs?</em></p></li>
+  <li>Hit "Resume" to allow the program to finish executing. Return to the
+  default Java perspective by clicking "Java" in the top-right corner or by
+  going to <code>Windows >> Open Perspective >> Other...</code> and selecting
+  Java (default).</li>
+</ul>
+
+<h2 id="hints">Hints</h2>
+<p>We strongly encourage you to use the
+<a href="../../forum.html">LMS Discussion Board</a>.
+</p>
+
+<h2 id="errata">Errata</h2>
+<p>None yet.</p>
+
+<h2 id="q-and-a">Q &amp; A</h2>
+<p>
+This section will list clarifications and answers to common questions
+about homeworks. We'll try to keep it as up-to-date as possible, so
+this should be the first place to look (after carefully rereading the
+homework handout and the specifications) when you have a problem.
+</p>
+--><!-- Here's the format for a Q/A
+<div class="example">
+<ul>
+<li><b>Q:</b> Do I have to use the Allen Center software labs? Can I work at home?</li>
+<li><b>A:</b> You can do either. You should look at the
+<a href="../../tools/WorkingAtHome.html">Working At Home</a> guide.</li>
+</ul>
+</div>
+-->Parts of this homework are derived from University of Washington's
+      Software Design and Implementation course.<!-- LocalWords:  SVN screenshots filesystem JUnit username javadoc reacquaint
+ --><!-- LocalWords:  RandomHello HolaWorld XP javac psets java ps argv IWS WebQ
+ --><!-- LocalWords:  RandomHelloTest spanishGree crossmark HelloWorld randomHello
+ --><!-- LocalWords:  getGreeting randomGenerator lang CTRL rganize nextInt int cd
+ --><!-- LocalWords:  Hola Mundo Monde Hallo Mondo FibonacciTest HolaWorldTest txt
+ --><!-- LocalWords:  testThrowsIllegalArgumentException IllegalArgumentException
+ --><!-- LocalWords:  testBaseCase testInductiveCase BallTest Pre BallContainer
+ --><!-- LocalWords:  getVolume pre LinkedList BallContainerTest BoxTest buildfile
+ --><!-- LocalWords:  BoxContainer getBallsFromSmallest xml pset mkdir dir dev cse
+ --><!-- LocalWords:  junit sec SunBlade IntelliStation BBEdit html Exp attu impl
+ --><!-- LocalWords:  XHTML YourWorkspaceDirectory classpath cleancopy src
+ --> </p>
+  </body>
+</html>

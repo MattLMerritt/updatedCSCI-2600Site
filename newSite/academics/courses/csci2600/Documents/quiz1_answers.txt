@@ -1,0 +1,31 @@
+1. (12 points)
+true
+true
+true
+true
+false
+false
+true
+true
+false
+false
+false
+false
+
+2. (4 points)
+false
+true
+false
+true
+
+3. (6 points)
+Mixed model for variables
+
+4. (6 points)
+Type safety implies that operations on objects of the wrong type are never allowed
+Two objects with the same values of all fields may be considered not equal under reference equality
+Java is type safe
+
+We would not deduct points for anyone who selected "References in Java are similar to references in C++". While someone might argue that they are similar, here are some important differences between Java references and C++ references:
+1) In C++ there are no null references
+2) In C++ references cannot be assigned as there is no way you can operate on the reference itself without regards to the object to which it refers (more details can be found here: https://isocpp.org/wiki/faq/references)

@@ -9,6 +9,7 @@ is to make improvements to the GUI for the site inorder to improve aesthetic and
 - Resize Weekly Schedule to fit to page on "Class Schedule" page  (should get second opinions).
 
 ## Resources"
-- https://images.nasa.gov/details-iss040e010458
+- Homepage photo under NASA Media Usage Guidelines for educational purposes:
+  - https://images.nasa.gov/details-iss040e010458
 - Bootswatch under MIT License
   - https://github.com/thomaspark/bootswatch/blob/v5/LICENSE

@@ -55,132 +55,121 @@
     <div class="display-4 text-center pt-md-2">
       <h3><strong>Resources</strong></h3>
     </div>
-    <div card>
-      <div class="card mb-3">
-        <div class="card-header">
-          <h3>Helpful Web Sites</h3>
+    <div class="card mb-3" id="helpful-sites">
+      <div class="card-header">
+        <h3>Helpful Web Sites</h3>
+      </div>
+      <div class="p-md-2" id="helpful-sites-content">
+        <div id="site1">
+          <h6><strong>Examples from lecture:</strong></h6>
+          <a href="https://github.com/KCony/PSoftExamples.git">Examples</a><br><br>
         </div>
-        <div Resource class="p-md-2">
-          <class link>
-            <h6><strong>Examples from lecture:</strong></h6>
-            <a href="https://github.com/KCony/PSoftExamples.git">Examples</a><br><br>
-          </class>
-          <class link>
-            <h6><strong>Submitty Discussion Forum:</strong></h6>
-            <a href="https://submitty.cs.rpi.edu/courses/s22/csci2600/forum">Discussion Forum</a>
-          </class>
+        <div id="site2">
+          <h6><strong>Submitty Discussion Forum:</strong></h6>
+          <a href="https://submitty.cs.rpi.edu/courses/s22/csci2600/forum">Discussion Forum</a>
         </div>
       </div>
     </div>
-    <div card>
-      <div class="card mb-3">
-        <div class="card-header">
-          <h3>Quizes/Exams</h3>
+
+    <div class="card mb-3" id="quizes-exams">
+      <div class="card-header">
+        <h3>Quizes/Exams</h3>
+      </div>
+      <div class="list-group list-group-flush p-md-2" id="quizes">
+        <h6 id="quizes-header"><strong>Quizes:</strong></h6>
+        <div id="quiz1-content">
+          <a href="Documents/quiz1.pdf">Quiz 1</a><br>
+          <a href="Documents/quiz1_answers.txt"><strong>Quiz 1 answers</strong></a><br><br>
         </div>
-        <ul class="list-group list-group-flush p-md-2">
-          <div id="quizes">
-            <h6 id="quizes-header"><strong>Quizes:</strong></h6>
-            <div id="quiz1">
-              <a href="Documents/quiz1.pdf">Quiz 1</a><br>
-              <a href="Documents/quiz1_answers.txt"><strong>Quiz 1 answers</strong></a><br><br>
-            </div>
-            <!--div id="quiz2-content">
+        <!--div id="quiz2-content">
               <a href="Documents/quiz2.pdf">Quiz 2</a><br>
               <a href="Documents/quiz2_answers.txt"><strong>Quiz 2 answers</strong></a><br><br>
             </div-->
-            <!--div id="quiz3-content">
+        <!--div id="quiz3-content">
               <a href="Documents/quiz3.pdf">Quiz 3</a><br>
               <a href="Documents/quiz3_answers.txt"><strong>Quiz 3 answers</strong></a><br><br>
             </div-->
-            <!--div id="quiz4-content">
+        <!--div id="quiz4-content">
               <a href="Documents/quiz4.pdf">Quiz 4</a><br>
               <a href="Documents/quiz4_answers.txt"><strong>Quiz 4 answers</strong></a><br><br>
             </div-->
-            <!--div id="quiz5-content">
+        <!--div id="quiz5-content">
               <a href="Documents/quiz5.pdf">Quiz 5</ a><br>
               <a href="Documents/quiz5_answers.txt"><strong>Quiz 5 answers</strong></a><br><br>
             </div-->
-            <!--div id="quiz6-content">
+        <!--div id="quiz6-content">
               <a href="Documents/quiz6.pdf">Quiz 6</a><br>
               <a href="Documents/quiz6_answers.txt"><strong>Quiz 6 answers</strong></a><br><br>
             </div-->
-            <!--div id="quiz7-content">
+        <!--div id="quiz7-content">
               <a href="Documents/quiz7.pdf">Quiz 7</a><br>
               <a href="Documents/quiz7_answers.txt"><strong>Quiz 7 answers</strong></a><br><br>
             </div-->
-            <!--div id="quiz8-content">
+        <!--div id="quiz8-content">
               <a href="Documents/quiz8.pdf">Quiz 8</a><br>
               <a href="Documents/quiz8_answers.txt"><strong>Quiz 8 answers</strong></a><br><br>
             </div-->
-          </div>
-          <div id="exams">
-            <h6><strong>Test and Exams:</strong></h6>
-            <a href="Documents/Practice_Part1_Set1.pdf">Additional Practice Problems (Hoare Logic, Reasoning,
-              Loops)</a><br>
-          </div>
-        </ul>
+      </div>
+      <div class="list-group list-group-flush p-md-2" id="exams">
+        <h6><strong>Test and Exams:</strong></h6>
+        <a href="Documents/Practice_Part1_Set1.pdf">Additional Practice Problems (Hoare Logic, Reasoning,
+          Loops)</a>
       </div>
     </div>
-    <div card>
-      <div class="card mb-3">
-        <div class="card-header">
-          <h3>Handouts</h3>
-        </div>
-        <div Resource class="p-md-2">
-          <class links>
-            <a href="Documents/eclipse_and_git.pdf">Eclipse and Git</a><br>
-            <a href="Documents/Dafny how-to.html">Installing and using Dafny for Windows</a><br>
-          </class>
-        </div>
+
+    <div class="card mb-3" id="handouts">
+      <div class="card-header">
+        <h3>Handouts</h3>
+      </div>
+      <div class="p-md-2" id="handouts-content">
+        <a href="Documents/eclipse_and_git.pdf">Eclipse and Git</a><br>
+        <a href="Documents/Dafny how-to.html">Installing and using Dafny for Windows</a><br>
       </div>
     </div>
-    <div card>
-      <div class="card mb-3">
-        <div class="card-header">
-          <h3>
-            Books
-          </h3>
+
+    <div class="card mb-3" id="books">
+      <div class="card-header">
+        <h3>Books</h3>
+      </div>
+      <div id="books-content">
+        <div class="p-md-2" id="book1">
+          <h4 class="card-title"><strong>Effective Java</strong></h4>
+          <img src="Images\bloch-sm.jpg" alt="book1" class="center">
+          <p>Effective Java, 3rd ed. by Bloch Addison-Wesley, 2008 ISBN 860-1300201986</p>
         </div>
-        <div id="books">
-          <div class="p-md-2" id="book1">
-            <h4 class="card-title"><strong>Effective Java</strong></h4>
-            <img src="Images\bloch-sm.jpg" alt="book1" class="center">
-            <p>Effective Java, 3rd ed. by Bloch Addison-Wesley, 2008 ISBN 860-1300201986</p>
-          </div>
-          <div class="p-md-2" id="book2">
-            <h4 class="card-title"><strong>Design Patterns: Elements of Reusable Object-Oriented Software</strong></h4>
-            <img src="Images\gamma-sm.jpg" alt="book2" class="center">
-            <p>Design Patterns: Elements of Reusable Object-Oriented Software, by Gamma, Helm, Johnson, and Vlissides
-              Addison-Wesley, 1995 ISBN 978-0201633610</p>
-          </div>
-          <div class="p-md-2" id="book3">
-            <h4 class="card-title"><strong>Refactoring: Improving the Design of Existing Code</strong></h4>
-            <img src="Images\fowler-sm.jpg" alt="book2" class="center">
-            <p>Refactoring: Improving the Design of Existing Code by Fowler Addison-Wesley, 1999 ISBN 978-0201485677</p>
-          </div>
-          <div class="p-md-2" id="book4">
-            <h4 class="card-title"><strong>A Philosophy of Software Design</strong></h4>
-            <img src="Images\philosophy.jpg" alt="book2" class="center">
-            <p>A Philosophy of Software Design by John Ousterhout Yaknyam Press ISBN-13: 978-1732102200</p>
-          </div>
+        <div class="p-md-2" id="book2">
+          <h4 class="card-title"><strong>Design Patterns: Elements of Reusable Object-Oriented Software</strong></h4>
+          <img src="Images\gamma-sm.jpg" alt="book2" class="center">
+          <p>Design Patterns: Elements of Reusable Object-Oriented Software, by Gamma, Helm, Johnson, and Vlissides
+            Addison-Wesley, 1995 ISBN 978-0201633610</p>
+        </div>
+        <div class="p-md-2" id="book3">
+          <h4 class="card-title"><strong>Refactoring: Improving the Design of Existing Code</strong></h4>
+          <img src="Images\fowler-sm.jpg" alt="book2" class="center">
+          <p>Refactoring: Improving the Design of Existing Code by Fowler Addison-Wesley, 1999 ISBN 978-0201485677</p>
+        </div>
+        <div class="p-md-2" id="book4">
+          <h4 class="card-title"><strong>A Philosophy of Software Design</strong></h4>
+          <img src="Images\philosophy.jpg" alt="book2" class="center">
+          <p>A Philosophy of Software Design by John Ousterhout Yaknyam Press ISBN-13: 978-1732102200</p>
         </div>
       </div>
     </div>
-    <div card>
-      <div class="card mb-3">
-        <h3 class="card-header">Additional Sources</h3>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Main Java Website by Oracle: http://java.com</li>
-          <li class="list-group-item">Java documentation: http://docs.oracle.com/javase/</li>
-          <li class="list-group-item">Java 8 API: http://docs.oracle.com/javase/8/docs/api/</li>
-          <li class="list-group-item">Java 16 API: https://docs.oracle.com/en/java/javase/16/docs/api/index.html</li>
-          <li class="list-group-item">Java tutorial: http://docs.oracle.com/javase/tutorial/</li>
-          <li class="list-group-item">Java language specification: http://docs.oracle.com/javase/specs/</li>
-          <li class="list-group-item">Java News and Resources: https://go.java/index.html</li>
-        </ul>
+
+    <div class="card mb-3" id="additional-sources">
+      <div class="card-header">
+        <h3>Additional Sources</h3>
       </div>
+      <ul class="list-group list-group-flush" id="additional-sources-content">
+        <li class="list-group-item">Main Java Website by Oracle: http://java.com</li>
+        <li class="list-group-item">Java documentation: http://docs.oracle.com/javase/</li>
+        <li class="list-group-item">Java 8 API: http://docs.oracle.com/javase/8/docs/api/</li>
+        <li class="list-group-item">Java 16 API: https://docs.oracle.com/en/java/javase/16/docs/api/index.html</li>
+        <li class="list-group-item">Java tutorial: http://docs.oracle.com/javase/tutorial/</li>
+        <li class="list-group-item">Java language specification: http://docs.oracle.com/javase/specs/</li>
+        <li class="list-group-item">Java News and Resources: https://go.java/index.html</li>
+      </ul>
     </div>
-  </div>
   </div>
 </body>
 

@@ -5,16 +5,16 @@ is to make improvements to the GUI for the site inorder to improve aesthetic and
 
 
 ## To Do:
-- Refactor Resources Page
 - Change published Google Sheet embeded iframe element link to Schedule.html to proper source.
 - Add a list of updated features to README.md of current site compared to original site.
 - Implement abililty to easily update new visible contents by uncommenting prefilled sources. Sources include documents for future lessons, reccomended reading material, etc...
   - Done:
     - Homeworks
     - Topics
-  - Remaining:
     - Quizes in Resources
     - Quiz Answers in Resources
+  - Remaining:
+
 - Center elements in Schedule page?
 
 ## Resources"

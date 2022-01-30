@@ -1,12 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html style="overflow-y: scroll;">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta content="text/html; charset=windows-1252" http-equiv="content-type">
-  <title>Schedule</title>
-  <style type="text/css"></style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/png" href="Images\CSCI-2600-favicon.png" />
   <link rel="stylesheet" href="bootstrap.css">
-
+  <title>CSCI-2600</title>
 </head>
 
 <header>
@@ -51,38 +52,39 @@
 </header>
 
 <body>
-  <div class="display-4 text-center pt-md-2">
-    <h3><strong>Class Schedule</strong></h3>
-  </div>
-  <div id="office-hours">
-    <div id="office-hours-title">
-      <h2>Weekly Schedule</h2>
+  <div class="container-fluid bg-tan text-center">
+    <div class="display-4 text-center pt-md-2">
+      <h3><strong>Class Schedule</strong></h3>
     </div>
-    <div id="office-hours-iframe">
+    <div id="office-hours">
+      <div id="office-hours-title">
+        <h2>Weekly Schedule</h2>
+      </div>
+      <!--div id="office-hours-iframe">
       <iframe
         src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR_nakvkOb6eXBeg1K6KFLnMDigMltdOpjxRlaSH5n-vGvT2uCNKSmkg-p4JMcXneucwgopJy210Eh9/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
         style="border: 0" scrolling="no" width="840" frameborder="0" height="432">
+      </iframe-->
+    </div>
+    <div id="weeklySchedule">
+      <img src="Images\office-hours.PNG" class="img-fluid">
+    </div>
+    <br />
+    <div id="class-topic-schedule">
+      <h2>Class Topics Schedule</h2>
+      NB: The schedule is tentative and subject to change.
+      <br>
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=oh06ff7kf0s9f3p352b3th0hr0%40group.calendar.google.com&ctz=America%2FNew_York"
+        style="border: 0" scrolling="no" width="800" frameborder="0" height="600">
       </iframe>
     </div>
-    <!--<div id="weeklySchedule">
-      <img src="Images\office-hours.PNG" class="img-fluid">
-    </div>-->
-  </div>
-  <br />
-  <div id="class-topic-schedule">
-    <h2>Class Topics Schedule</h2>
-    NB: The schedule is tentative and subject to change.
-    <br>
-    <iframe
-      src="https://calendar.google.com/calendar/embed?src=oh06ff7kf0s9f3p352b3th0hr0%40group.calendar.google.com&ctz=America%2FNew_York"
-      style="border: 0" scrolling="no" width="800" frameborder="0" height="600">
-    </iframe>
   </div>
 </body>
 
 <footer>
   <div id="last updated">
-    RPI CSCI-2600 Last updated 1-29-2022
+    RPI CSCI-2600 Last updated 1-30-2022
   </div>
 </footer>
 

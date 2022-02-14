@@ -1,0 +1,21 @@
+1. (2 points)
+Dynamic binding
+Subtyping
+Overridden methods
+Overloading
+
+
+2. (3 points)
+The result is undefined
+When precondition is violated, the result is undefined, the specification does not say.
+
+3. (2 points)
+false
+
+4. (3 points)
+{ z == 5 && y != z }, alternatively { z == 5 && y != 5 }, etc.
+{ z == 5 && y != z }, alternatively { (z != 5 && false) || (z == 5 && y - z != 0) }, or { (false) || (z == 5 && y - z != 0) }, or { z == 5 && y != 5 }, etc.
+{ false }
+{ false }, alternatively { z - z != 0}, or { 0 != 0 }
+{ y - z != 0 }, alternatively { y != z }
+{ y - z != 0 }, alternatively { y != z }
